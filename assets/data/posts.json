@@ -1,0 +1,51 @@
+[
+    {
+      "id": "1",
+      "image": "samples/landscapes/beach-boat",
+      "image_url": "https://static.zoomnews.com/photo/96566024/96566024.jpg",
+      "caption": "Embrace the night and its stunning beauty.",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/people/boy-snow-hoodie",
+        "image_url": "https://ashisheditz.com/wp-content/uploads/2023/11/instagram-profile-attitude-girl-dp.jpg",
+        "username": "Priyajoshi394"
+      }
+    },
+    {
+      "id": "2",
+      "image": "samples/woman-on-a-football-field",
+      "image_url": "https://i.pinimg.com/736x/33/a2/1d/33a21d5793c2e511de14f930082dd76a.jpg",
+      "caption": "Ending the day on a high note 🎶. ...",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/people/smiling-man",
+        "image_url": "https://images.unsplash.com/photo-1628563694622-5a76957fd09c?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zdGFncmFtJTIwcHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+        "username": "M_O_H_I_T"
+      }
+    },
+    {
+      "id": "3",
+      "image": "samples/dessert-on-a-plate",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyHVQltFRLuGr0r-i8ddPWHnEec36CTPFi8w&s",
+      "caption": "Less talk, more pose",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/bike",
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzOEVZHTmZaq8y6tQaIbaVCnn63UUK-WO8vQ&s",
+        "username": "Swatii__"
+      }
+    },
+    {
+      "id": "4",
+      "image": "samples/balloons",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Golden_Retriever_standing_Tucker.jpg/640px-Golden_Retriever_standing_Tucker.jpg",
+      "caption": "This friendship is fur real",
+      "user": {
+        "id": "u1",
+        "avatar_url": "samples/animals/cat",
+        "image_url": "https://dogtime.com/wp-content/uploads/sites/12/2024/03/GettyImages-1285465107-e1710251441662.jpg?w=1024",
+        "username": "furry_tales"
+      }
+    }
+  ]
+  
