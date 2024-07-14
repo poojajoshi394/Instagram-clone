@@ -1,18 +1,46 @@
-import React, { useState } from 'react';
-import { View, Image, Text, TextInput ,Pressable} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Image, Text, TextInput, Pressable } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import Button from '../../components/Button';
 
 export default function CreatePost() {
   const [caption, setCaption] = useState('');
+  const [image, setImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!image) {
+      pickImage();
+    }
+  }, [image]);
+
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
+
+    console.log(result);
+
+    if (!result.canceled) {
+      setImage(result.assets[0].uri);
+    }
+  };
 
   return (
     <View className="p-3 items-center flex-1">
       {/* Image Picker */}
-      <Image
-        source={{ uri: 'https://ashisheditz.com/wp-content/uploads/2023/11/instagram-profile-attitude-girl-dp.jpg' }}
-        className="w-52 aspect-[3/4] rounded-lg shadow-md"
-      />
+      {image ? (
+        <Image
+          source={{ uri: image }}
+          className="w-52 aspect-[3/4] rounded-lg shadow-md"
+        />
+      ) : (
+        <View className="w-52 aspect-[3/4] rounded-lg bg-slate-300" />
+      )}
       {/* Button */}
-      <Text onPress={() => {}} className="text-blue-500 font-semibold m-5">
+      <Text onPress={pickImage} className="text-blue-500 font-semibold m-5">
         Change
       </Text>
       {/* Text input */}
@@ -22,11 +50,9 @@ export default function CreatePost() {
         placeholder="What is on your mind"
         className="w-full p-3"
       />
-      {/*button*/}
+      {/* Button */}
       <View className="mt-auto w-full">
-      <Pressable className='bg-blue-500 w-full p-3 items-center rounded-md'>
-        <Text className="text-white font-semibold">Share</Text>
-      </Pressable>
+        <Button title="Share" />
       </View>
     </View>
   );
